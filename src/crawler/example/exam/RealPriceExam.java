@@ -17,7 +17,6 @@ import org.jsoup.nodes.Element;
  * 3. 爬蟲包可解析中文TagName，試著使用看看
  * 
  * @author Abola Lee
- *
  */
 public class RealPriceExam {
 	public static void main(String[] args) {
