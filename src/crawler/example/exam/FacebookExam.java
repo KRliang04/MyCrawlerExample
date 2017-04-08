@@ -25,8 +25,8 @@ public class FacebookExam {
 
 		String uri = 
 				"https://graph.facebook.com/v2.6"
-				+ "/search?q="
-				+ "&access_token=";
+				+ "/natgeomedia/feed?fields=id,reactions.limit(0).summary(total_count)"
+				+ "&access_token=EAACEdEose0cBAFXx1mZCeOu01L8vFQZAGkRcv21uLfRJ2dzm0fvLjZCWubcJvJ9fq9IqZCcjPElmOYoXYMRfUAWSnpmr4fGfIZBCcbmxZAN8ki6cZCZBBaJMwrIgShOPuUzaeZBW8TuGqZBmPjFvZBllZC5ZBTHiTePR34Ks6dOJZCCc0ZCiKxZCy1pZAf8gDNwJHybssufMZD";
 
 
 		Elements elems =
@@ -39,9 +39,10 @@ public class FacebookExam {
 		// 遂筆處理
 		for( Element data: elems ){
 			String id = data.select("id").text();
+			String reactions = data.select("reactions").text();
 
 			// FIXIT
-			String reactions = "";
+
 
 
 			output += id + "," + reactions + "\n";
